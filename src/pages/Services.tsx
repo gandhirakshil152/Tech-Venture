@@ -83,8 +83,8 @@ const Services = () => {
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 shadow-lg`} style={{ boxShadow: `0 4px 20px ${service.shadow}40` }}>
                   <service.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="font-display text-lg text-foreground mb-2 group-hover:neon-text transition-all duration-300">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
+                <h3 className="font-display text-xl text-foreground mb-2 group-hover:neon-text transition-all duration-300">{service.title}</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.techs.map((tech) => (
                     <span key={tech} className="text-xs px-2.5 py-1 rounded-full bg-secondary/80 text-muted-foreground border border-border">{tech}</span>

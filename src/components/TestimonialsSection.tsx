@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
         >
           <p className="font-accent text-primary text-base tracking-[0.3em] uppercase mb-3">Why Choose Us</p>
           <h2 className="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Built Different</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base">
+          <p className="text-muted-foreground max-w-lg mx-auto text-xl">
             We're not just another agency. Here's why clients trust us with their vision.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
                 >
                   <reason.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="font-accent font-semibold text-foreground text-base tracking-wider mb-2">{reason.title}</h3>
+                <h3 className="font-accent font-semibold text-foreground text-xl tracking-wider mb-2">{reason.title}</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">{reason.desc}</p>
               </div>
             </motion.div>

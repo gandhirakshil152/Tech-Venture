@@ -22,9 +22,9 @@ const ProjectsPreview = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <p className="font-accent text-primary text-sm tracking-[0.3em] uppercase mb-3">Portfolio</p>
+          <p className="font-accent text-primary text-bash tracking-[0.3em] uppercase mb-3">Portfolio</p>
           <h2 className="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Our Projects</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-sm">
+          <p className="text-muted-foreground max-w-lg mx-auto text-xl">
             Real work, real results. Each project represents our growing expertise.
           </p>
         </motion.div>

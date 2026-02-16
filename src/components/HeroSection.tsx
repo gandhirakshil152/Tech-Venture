@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const HeroSection = () => {
         alt=""
         className="absolute inset-0 w-full h-full object-cover object-center sm:object-center"
         initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.4 }}
+        animate={{ scale: 1.5, opacity: 0.8 }}
         transition={{ duration: 2.5, ease: "easeOut" }}
       />
       {/* Clean dark overlay */}
@@ -43,14 +43,15 @@ const HeroSection = () => {
             TECH-VENTURE
           </motion.h1>
           <motion.p
-            className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-xl mx-auto mb-4 font-body leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            A young startup fueled by curiosity and passion. We may be new, but we dream big
-            and build bold — one project at a time.
-          </motion.p>
+  className="text-muted-foreground text-lg sm:text-xl md:text-xl max-w-xs sm:max-w-md md:max-w-xl mx-auto mb-4 font-body leading-relaxed"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.8 }}
+>
+  A young startup fueled by curiosity and passion. We may be new, but we dream big
+  and build bold — one project at a time.
+</motion.p>
+
           <motion.p
             className="text-lg sm:text-xl md:text-2xl font-accent tracking-[0.15em] sm:tracking-[0.2em] mb-8 sm:mb-10 font-semibold"
             initial={{ opacity: 0 }}

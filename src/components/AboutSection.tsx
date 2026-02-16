@@ -60,7 +60,7 @@ const AboutSection = () => {
               <Mail className="w-5 h-5 text-primary flex-shrink-0" />
               <a
                 href="mailto:techventure04@gmail.com"
-                className="text-sm hover:text-primary transition-colors"
+                className="text-bash hover:text-primary transition-colors"
               >
                 techventure04@gmail.com
               </a>
@@ -70,7 +70,7 @@ const AboutSection = () => {
               <Phone className="w-5 h-5 text-primary flex-shrink-0" />
               <a
                 href="tel:+919328621177"
-                className="text-sm hover:text-primary transition-colors"
+                className="text-bash hover:text-primary transition-colors"
               >
                 +91 9328621177
               </a>
@@ -78,7 +78,7 @@ const AboutSection = () => {
 
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-              <span className="text-sm">Gujarat, India</span>
+              <span className="text-bash">Gujarat, India</span>
             </div>
           </motion.div>
         </div>

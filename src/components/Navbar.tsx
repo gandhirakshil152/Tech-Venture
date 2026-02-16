@@ -48,7 +48,7 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="relative px-4 py-2 rounded-lg font-accent text-xs tracking-wider uppercase transition-all duration-300"
+                  className="relative px-4 py-2 rounded-lg font-accent text-bash tracking-wider uppercase transition-all duration-300"
                   style={{
                     color: isActive ? link.color : undefined,
                     textShadow: isActive ? `0 0 10px ${link.color}80, 0 0 30px ${link.color}40` : undefined,
@@ -69,7 +69,7 @@ const Navbar = () => {
             {user ? (
               <button
                 onClick={handleLogout}
-                className="ml-2 flex items-center gap-1.5 px-3 py-2 rounded-lg font-accent text-xs tracking-wider text-muted-foreground hover:text-foreground transition-colors"
+                className="ml-2 flex items-center gap-1.5 px-3 py-2 rounded-lg font-accent text-bash tracking-wider text-muted-foreground hover:text-foreground transition-colors"
               >
                 <LogOut className="w-3.5 h-3.5" /> Logout
               </button>

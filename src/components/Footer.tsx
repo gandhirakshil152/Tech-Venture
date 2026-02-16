@@ -1,18 +1,41 @@
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  MessageCircle, 
+  Instagram, 
+  Facebook 
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { toast } from "sonner";
+import { subscribeToNewsletter } from "@/lib/supabase-store";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    
-    // TODO: Connect to backend / email service (Mailchimp, Resend, etc.)
-    console.log("Subscribed:", email);
-    setEmail("");
+
+    if (!email.trim()) return;
+
+    setSubscribing(true);
+
+    try {
+      await subscribeToNewsletter(email.trim().toLowerCase());
+      toast.success("🎉 Subscribed successfully!");
+      setEmail("");
+    } catch (err: any) {
+      if (err?.code === "23505") {
+        toast.error("You're already subscribed.");
+      } else {
+        toast.error("Subscription failed. Please try again.");
+      }
+    }
+
+    setSubscribing(false);
   };
 
   return (
@@ -23,10 +46,10 @@ const Footer = () => {
         <div className="mb-12 p-6 rounded-xl border border-border bg-muted/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="font-display text-sm tracking-wider neon-text mb-1">
+              <h3 className="font-display text-bash tracking-wider neon-text mb-1">
                 Subscribe to our Newsletter
               </h3>
-              <p className="text-xs text-muted-foreground max-w-md">
+              <p className="text-bash text-muted-foreground max-w-md">
                 Get updates on new projects, tech insights, and startup stories.
               </p>
             </div>
@@ -41,13 +64,14 @@ const Footer = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-3 py-2 text-xs rounded-md bg-background border border-border focus:outline-none focus:border-primary w-full md:w-64"
+                className="px-3 py-2 text-bash rounded-md bg-background border border-border focus:outline-none focus:border-primary w-full md:w-64"
               />
               <button
                 type="submit"
-                className="px-4 py-2 text-xs bg-primary text-primary-foreground rounded-md hover:opacity-90 transition"
+                disabled={subscribing}
+                className="px-4 py-2 text-xs bg-primary text-primary-foreground rounded-md hover:opacity-90 transition disabled:opacity-50"
               >
-                Subscribe
+                {subscribing ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>
@@ -55,20 +79,23 @@ const Footer = () => {
 
         {/* Main Footer Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
+          
+          {/* Brand */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
               <img src={logo} alt="Tech-Venture" className="w-8 h-8" />
-              <span className="font-display text-sm neon-text tracking-wider">
+              <span className="font-display text-xl neon-text tracking-wider">
                 TECH-VENTURE
               </span>
             </div>
-            <p className="text-xs text-muted-foreground max-w-xs">
+            <p className="text-bash text-muted-foreground max-w-xs">
               A young startup building bold digital experiences with passion and innovation.
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <p className="font-accent text-xs text-primary tracking-wider uppercase mb-3">
+            <p className="font-accent text-xl text-primary tracking-wider uppercase mb-3">
               Quick Links
             </p>
             <div className="grid grid-cols-2 gap-1">
@@ -76,7 +103,7 @@ const Footer = () => {
                 <Link
                   key={path}
                   to={path}
-                  className="text-xs text-muted-foreground hover:text-primary transition-colors py-1 capitalize"
+                  className="text-bash text-muted-foreground hover:text-primary transition-colors py-1 capitalize"
                 >
                   {path.slice(1)}
                 </Link>
@@ -84,43 +111,63 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <p className="font-accent text-xs text-primary tracking-wider uppercase mb-3">
-              Contact
-            </p>
-            <div className="space-y-2 text-xs text-muted-foreground">
-              <a
-                href="mailto:techventure04@gmail.com"
-                className="flex items-center gap-1.5 hover:text-primary transition-colors"
-              >
-                <Mail className="w-3 h-3 text-primary" />
-                techventure04@gmail.com
-              </a>
+{/* Contact Section */}
+<div>
+  <p className="font-accent text-xl text-primary tracking-wider uppercase mb-4">
+    Contact
+  </p>
 
-              <a
-                href="tel:+919328621177"
-                className="flex items-center gap-1.5 hover:text-primary transition-colors"
-              >
-                <Phone className="w-3 h-3 text-primary" />
-                +91 9328621177
-              </a>
+  <div className="flex items-center gap-5">
 
-              <a
-                href="https://wa.me/919328621177"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-[hsl(142,70%,45%)] transition-colors"
-              >
-                <MessageCircle className="w-3 h-3 text-[hsl(142,70%,45%)]" />
-                WhatsApp
-              </a>
+    {/* Email */}
+    <a
+      href="mailto:techventure04@gmail.com"
+      className="text-muted-foreground hover:text-primary transition-colors"
+    >
+      <Mail className="w-5 h-5" />
+    </a>
 
-              <span className="flex items-center gap-1.5">
-                <MapPin className="w-3 h-3 text-primary" />
-                Gujarat, India
-              </span>
-            </div>
-          </div>
+    {/* Phone */}
+    <a
+      href="tel:+919328621177"
+      className="text-muted-foreground hover:text-primary transition-colors"
+    >
+      <Phone className="w-5 h-5" />
+    </a>
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/919328621177"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-green-500 transition-colors"
+    >
+      <MessageCircle className="w-5 h-5" />
+    </a>
+
+    {/* Instagram */}
+    <a
+      href="https://instagram.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-pink-500 transition-colors"
+    >
+      <Instagram className="w-5 h-5" />
+    </a>
+
+    {/* Facebook */}
+    <a
+      href="https://facebook.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-blue-600 transition-colors"
+    >
+      <Facebook className="w-5 h-5" />
+    </a>
+
+  </div>
+</div>
+
         </div>
 
         {/* Bottom Bar */}

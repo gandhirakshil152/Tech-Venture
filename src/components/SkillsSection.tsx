@@ -30,7 +30,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">
             Tech Stack
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base">
+          <p className="text-muted-foreground max-w-lg mx-auto text-xl">
             Technologies we're passionate about and continuously learning to build amazing products.
           </p>
         </motion.div>
