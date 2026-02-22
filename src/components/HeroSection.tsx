@@ -52,20 +52,23 @@ const HeroSection = () => {
   and build bold — one project at a time.
 </motion.p>
 
-          <motion.p
-            className="text-lg sm:text-xl md:text-2xl font-accent tracking-[0.15em] sm:tracking-[0.2em] mb-8 sm:mb-10 font-semibold"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
-            <span className="text-primary">Learning</span>
-            <span className="text-muted-foreground/60 mx-2">•</span>
-            <span style={{ color: "hsl(260, 80%, 65%)" }}>Building</span>
-            <span className="text-muted-foreground/60 mx-2">•</span>
-            <span style={{ color: "hsl(50, 100%, 55%)" }}>Growing</span>
-            <span className="text-muted-foreground/60 mx-2">•</span>
-            <span style={{ color: "hsl(320, 80%, 60%)" }}>Shipping</span>
-          </motion.p>
+<motion.p
+  className="flex flex-wrap justify-center items-center text-base sm:text-xl md:text-2xl font-accent font-semibold gap-2 sm:gap-3 mb-8 sm:mb-10"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1 }}
+>
+  <span className="text-primary">Learning</span>
+  <span className="text-muted-foreground/60 hidden sm:inline">•</span>
+
+  <span style={{ color: "hsl(260, 80%, 65%)" }}>Building</span>
+  <span className="text-muted-foreground/60 hidden sm:inline">•</span>
+
+  <span style={{ color: "hsl(50, 100%, 55%)" }}>Growing</span>
+  <span className="text-muted-foreground/60 hidden sm:inline">•</span>
+
+  <span style={{ color: "hsl(320, 80%, 60%)" }}>Shipping</span>
+</motion.p>
         </motion.div>
 
         <motion.div

@@ -3,6 +3,7 @@ import {
   Phone, 
   MapPin, 
   MessageCircle, 
+  Youtube,
   Instagram, 
   Facebook 
 } from "lucide-react";
@@ -145,15 +146,15 @@ const Footer = () => {
       <MessageCircle className="w-5 h-5" />
     </a>
 
-    {/* Instagram */}
-    <a
-      href="https://instagram.com/yourusername"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-muted-foreground hover:text-pink-500 transition-colors"
-    >
-      <Instagram className="w-5 h-5" />
-    </a>
+{/* Instagram */}
+<a
+  href="https://www.instagram.com/techventures04?igsh=MXJ1bHpma3hkYTZ3bw=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-muted-foreground hover:text-pink-500 transition-colors"
+>
+  <Instagram className="w-5 h-5" />
+</a>
 
     {/* Facebook */}
     <a
@@ -165,6 +166,15 @@ const Footer = () => {
       <Facebook className="w-5 h-5" />
     </a>
 
+    {/* YouTube */}
+<a
+  href="https://www.youtube.com/channel/UCP5jjtb3DCitN9oi-3dWCPA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-muted-foreground hover:text-red-600 transition-colors"
+>
+  <Youtube className="w-5 h-5" />
+</a>
   </div>
 </div>
 

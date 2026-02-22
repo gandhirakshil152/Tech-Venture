@@ -20,7 +20,7 @@ import ParticleBackground from "./components/ParticleBackground";
 import SplashScreen from "./components/SplashScreen";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import AuthPopup from "./components/AuthPopup";
-
+import BlogDetails from "./pages/blogDetails";
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -46,6 +46,8 @@ const App = () => {
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
+            
           </Routes>
           <Footer />
           <FloatingWhatsApp />

@@ -4,10 +4,12 @@ import { BookOpen, Calendar, ArrowRight, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import PageHero from "@/components/PageHero";
 import FAQs from "./FAQs";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const load = async () => {
@@ -75,9 +77,12 @@ const Blogs = () => {
                   </div>
                   <h3 className="font-display text-lg text-foreground mb-2 group-hover:neon-text transition-all">{post.title}</h3>
                   <p className="text-muted-foreground text-sm line-clamp-3 mb-4">{post.excerpt || post.content.slice(0, 150)}</p>
-                  <span className="inline-flex items-center gap-1 text-primary text-sm font-accent hover:gap-2 transition-all cursor-pointer">
-                    Read More <ArrowRight className="w-3 h-3" />
-                  </span>
+                  <button
+  onClick={() => navigate(`/blog/${post.id}`)}
+  className="inline-flex items-center gap-1 text-primary text-sm font-accent hover:gap-2 transition-all"
+>
+  Read More <ArrowRight className="w-3 h-3" />
+</button>
                 </div>
               </motion.article>
             ))}

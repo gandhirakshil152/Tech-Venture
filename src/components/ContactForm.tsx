@@ -176,7 +176,7 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass rounded-2xl p-6 border border-glass-border/30"
+className="glass rounded-2xl p-10 border border-glass-border/30 min-h-[200px] max-h-[380px] flex flex-col justify-center"
           >
             <h3 className="font-display text-lg mb-5" style={{ color: "hsl(260,80%,65%)" }}>Our Process</h3>
             <div className="space-y-4">
