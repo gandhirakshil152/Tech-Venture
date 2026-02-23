@@ -40,7 +40,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 80 }}
           >
-            TECH-VENTURE
+            Techventure
           </motion.h1>
           <motion.p
   className="text-muted-foreground text-lg sm:text-xl md:text-xl max-w-xs sm:max-w-md md:max-w-xl mx-auto mb-4 font-body leading-relaxed"
@@ -48,8 +48,7 @@ const HeroSection = () => {
   animate={{ opacity: 1 }}
   transition={{ delay: 0.8 }}
 >
-  A young startup fueled by curiosity and passion. We may be new, but we dream big
-  and build bold — one project at a time.
+  We design and develop reliable digital platforms that help businesses grow adapt and succeed online.
 </motion.p>
 
 <motion.p
