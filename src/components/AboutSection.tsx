@@ -31,13 +31,12 @@ const AboutSection = () => {
             <Rocket className="w-8 h-8 text-primary mb-4" />
             <h3 className="font-display text-xl mb-4 text-foreground">Our Story</h3>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              Tech-Venture is more than just a startup — it’s a movement fueled by curiosity,
-              creativity, and courage. We were born out of a simple idea: technology should inspire,
-              empower, and transform lives. Unlike traditional companies weighed down by years of
-              rigid processes, we thrive on agility and fresh perspectives. Every challenge excites
-              us, every project is a new frontier, and every success is proof that passion beats
-              convention. We are explorers in the digital age, constantly learning, adapting, and
-              pushing boundaries to create solutions that matter.
+              Techventure was built with a clear vision to deliver reliable web development ecommerce website development and mobile app development services that support real business needs.
+ We focus on creating digital solutions that are functional scalable and aligned with long term goals.
+ Every project begins with understanding requirements user experience and technical expectations.
+ Our approach combines thoughtful design clean development and performance focused execution.
+ We believe strong digital products are created through clarity collaboration and attention to detail.
+ Techventure continues to help businesses strengthen their online presence through custom development solutions.
             </p>
           </motion.div>
 
