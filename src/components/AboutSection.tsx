@@ -49,10 +49,9 @@ const AboutSection = () => {
           >
             <h3 className="font-display text-xl mb-4 text-foreground">Let’s Connect</h3>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              Whether you’re a fellow innovator, a curious learner, or someone with a bold idea,
-              we’d love to hear from you. Collaboration is at the heart of everything we do, and
-              every conversation sparks new possibilities. Reach out to us — let’s build something
-              extraordinary together.
+              Have an idea or a project in mind?
+ Connect with Techventure for professional web development ecommerce solutions and app development services.
+ Schedule a free consultation and take the first step toward building your digital platform.
             </p>
 
             <div className="flex items-center gap-3 text-muted-foreground">
