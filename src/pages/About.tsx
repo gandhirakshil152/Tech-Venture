@@ -49,23 +49,12 @@ const About = () => {
 
   <div className="space-y-8 text-lg lg:text-xl text-muted-foreground leading-relaxed">
     <p>
-      Tech-Venture was born from a simple belief: that young minds with the
-      right tools can build extraordinary things. We started as a small team
-      of developers and designers passionate about creating impactful digital
-      solutions.
+      Techventure was founded with a vision to create reliable digital solutions that help businesses grow in a fast evolving digital world. Our focus is on understanding real business needs and building technology that supports long term success.
+Through professional web development ecommerce website development and mobile app development Techventure aims to help businesses strengthen their online presence with scalable and performance driven solutions.
+
+
     </p>
 
-    <p>
-      Today, we offer end-to-end digital services — from stunning websites and
-      mobile apps to strategic digital marketing. We may be new, but our
-      commitment to quality and innovation sets us apart.
-    </p>
-
-    <p>
-      Every line of code we write, every design we craft, and every strategy
-      we implement is driven by our desire to help businesses succeed in the
-      digital world.
-    </p>
   </div>
 </motion.div>
 
