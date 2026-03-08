@@ -24,7 +24,7 @@ const About = () => {
         icon={Users}
         subtitle="About Us"
         title="Who We Are"
-        description="A young startup fueled by curiosity and passion, building bold digital experiences one project at a time."
+        description="Techventure is driven by curiosity creativity and a passion for technology. We aim to help businesses move forward with confidence through reliable digital platforms and thoughtful development."
         gradient="radial-gradient(ellipse at 50% 30%, hsl(260 80% 15% / 0.5), transparent 60%), radial-gradient(ellipse at 80% 70%, hsl(183 100% 15% / 0.3), transparent 50%)"
         orbColors={["hsl(260, 80%, 60%)", "hsl(183, 100%, 50%)", "hsl(340, 80%, 55%)"]}
       />
